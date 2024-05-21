@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Products from './Products';
+import './ProductList.css';
 
 const productList = [
     {
@@ -126,13 +127,12 @@ const productList = [
       },
    ];
 
-export default function ProductList() {
-  return (
-    <div>
-        
+   export default function ProductList() {
+    return (
+      <div className="product-list">
         {productList.map((item) => {
-            return <Products key = {item.id} item = {item}/>
-        })} 
-    </div>
-  )
-}
+          return <Products key={item.id} item={item} />;
+        })}
+      </div>
+    );
+  }
